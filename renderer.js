@@ -13,7 +13,7 @@ const editor = ace.edit(code(), {
 document.onkeydown = function (evt) {
   evt = evt || window.event;
   if (evt.ctrlKey && evt.keyCode == 13) {
-    ipcRenderer.send('form-submission', { input: input().innerHTML, code: editor.getValue() });
+    ipcRenderer.send('form-submission', { input: input().innerText, code: editor.getValue() });
   }
 };
 
