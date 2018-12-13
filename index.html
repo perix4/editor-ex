@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>EditorEx</title>
+</head>
+
+<body>
+  <div class="upper-left">
+    <div class="content input" contenteditable="true" name="input">input text</div>>
+  </div>
+  <div class="upper-right">
+    <div class="content code" name="code">input |> String.upcase() |> IO.puts()</div>
+  </div>
+  <div class="bottom">
+    <div class="content output" name="output" readonly="readonly"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js"></script>
+  <script src='renderer.js'></script>
+
+</html>
