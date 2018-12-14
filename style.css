@@ -1,59 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: 'Source Code Pro', monospace;
-  background-color: #333333;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #333333;
 }
 
-.upper-left {
-  position: fixed;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  left: 0;
+.flex-row {
+    display: flex;
+    height: 50vh;
 }
 
-.upper-right {
-  position: fixed;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  left: 50%;
-}
-
-.bottom {
-  position: fixed;
-  width: 100%;
-  height: 50%;
-  top: 50%;
-  left: 0;
-  width: 100%;
+.flex-row>* {
+    flex: 1;
 }
 
 div.content {
-  width: 100%;
-  height: 100%;
-  color: #CCCCCC;
-  background-color: #1d1d1d;
-  font-size: 10pt;
-  border: 1px solid #404040;
-  padding: 5pt;
+    color: #CCCCCC;
+    background-color: #1d1d1d;
+    font-size: 10pt;
+    border: 1px solid #404040;
+    padding: 5pt;
+    box-sizing: border-box;
 }
 
-div.content.output{
-  /* background-color: #333333; */
-  background-color: #1d1d1d;
+div.content.output {
+    /* background-color: #333333; */
+    background-color: #1d1d1d;
 }
 
-div.content.input{
-  background-color: #1d1d1d;
+div.content.input {
+    background-color: #1d1d1d;
 }
 
 div.error {
-  color: red;
+    color: red;
 }
