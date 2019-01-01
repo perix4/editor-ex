@@ -10,14 +10,15 @@ function createWindow() {
 app.on('ready', createWindow);
 
 ipcMain.on('form-submission', function (event, data) {
-  const file_path = `${__dirname}/tmp/test.exs`
+  const file_path = `${__dirname}/playground/test.exs`
+  const mix_path = `${__dirname}/playground/mix.exs`
   const contents = 'input="""\n' + data.input + '\n"""\n' + data.code;
   fs.writeFile(file_path, contents, function (err) {
     if (err) {
       return console.log(err);
     }
 
-    exec('elixir ' + file_path, (err, stdout, stderr) => {
+    exec(`MIX_EXS=${mix_path} mix run ${file_path}`, (err, stdout, stderr) => {
       console.log(`--\n err: ${err} \n stdout: ${stdout} \n stderr: ${stderr}`);
       win.webContents.send("result", { err: err, stdout: stdout, stderr: stderr })
     })

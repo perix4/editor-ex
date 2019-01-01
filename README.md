@@ -8,7 +8,15 @@ Elixir is actually great scripting language (better than bash obviously :)), so 
 
 ## Prerequisites
 
-Elixir command available in shell and `npm install`
+* Elixir's mix command available in shell
+* JS deps installed with `npm install`
+* Playground deps fetched with `mix deps.get` in `playground` folder
+
+In `playground` folder is located mix project where additional deps can be added, by default:
+
+* Poison (JSON encoder/decoder)
+* HTTPoison (HTTP client)
+* UUID (UUID helper and generator)
 
 ## Run
 
@@ -21,5 +29,7 @@ Elixir command available in shell and `npm install`
 ## Dark theme only
 
 Of course.
+
+![EditorEx](https://i.imgur.com/6wxrgfi.png)
 
 Screenshot: https://i.imgur.com/6wxrgfi.png
