@@ -34,6 +34,8 @@ div.content.output {
 
 div.content.input {
     background-color: #1d1d1d;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 div.error {
